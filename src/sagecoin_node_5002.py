@@ -106,7 +106,7 @@ def mine_block():
     proof = bc.proof_of_work(previous_proof)
     previous_hash = bc.hash(previous_block)
     block = bc.create_block(proof, previous_hash)
-    bc.add_transaction(sender = node_address, receiver= 'Minhaj', amount= 1)
+    bc.add_transaction(sender = node_address, receiver= 'Mahadi', amount= 1)
     response = {'message': 'successfully mined a block.',
                 'index' : block['index'],
                 'proof' : block['proof'],
@@ -163,4 +163,4 @@ def replace_chain():
     return jsonify(response), 200
 
 # running the flask app
-app.run(host = '0.0.0.0', port = 5000)
+app.run(host = '0.0.0.0', port = 5002)
